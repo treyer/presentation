@@ -16,8 +16,540 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				
+        <section data-transition="convex"><h1>Topic: SVG</h1></section>
+
+        <section data-transition="convex">
+          <section>
+            <h4>4 main graphic file formats for web-development:</h4>
+            <ul>
+              <li><p><strong>JPEG or JPG</strong></p></li>
+              <li><p><strong>GIF</strong></p></li>
+              <li><p><strong>PNG</strong></p></li>
+              <li><p><strong>SVG</strong></p></li>
+            </ul> 
+          </section>
+          <section>
+            <h4><strong>JPEG</strong> (Joint Photographic Experts Group)</h4>
+            <img src="assets/JPEG-photo.jpg" alt="JPEG photo example" width="400">
+            <ul>
+              <li>use: digital photo storage (fast load, many colours, small non-recurring fragments)</li>
+              <li>optimal 60-75% compression (loose data)</li>
+              <li>no transparency support (not useful for logos and icons)</li>
+            </ul>
+          </section>
+          <section>
+            <h4><strong>GIF</strong> (Graphic Interchange Format)</h4>
+            <img src="assets/GIF-example.gif" alt="GIF example">
+            <ul>
+              <li>transparency support, possibility of animation (use: logos, icons, gifs)</li>
+              <li>not optimal compression but no data loose </li>
+              <li>only 256 colours (no photos storage)</li>
+            </ul>
+          </section>
+          <section>
+            <h4><strong>PNG</strong> (Portable Network Graphic)</h4>
+            <img src="assets/PNG-ex.png" alt="PNG example" width="250">
+            <ul>
+              <li>GIF and JPEG combination (use: small images, logos, icons, diagrams, graphical elements with transparency, photos without quality loose)</li>
+              <li>256+ colours, better transparency support</li>
+              <li>better compression, no data loose (big files for big photos)</li>
+              <li>no animation support</li>
+            </ul>
+          </section>
+        </section>
+
+        <section data-transition="convex">
+          <section>
+            <h4>JPEG, GIF and PNG are BITMAPS</h4>
+            <p>(rectangular pixel array)</p>
+            <img src="assets/pixels.jpg" alt="Pixels">
+          </section>
+          <section>
+            <h4>When zoom in an image - loose its quality</h4>
+            <img src="assets/quality-1.png" alt="Quality 1" width="300">
+            <img src="assets/quality-2.png" alt="Quality 2" width="300">
+            <img src="assets/quality-3.png" alt="Quality 3" width="300">
+          </section>
+        </section>
+
+        <section data-transition="convex" data-background="#fff">
+          <section>
+            <h4>Problem solves by using vector-based graphics (in web by SVG - Scalable Vector Graphics)</h4>
+            <p>(create using primitives - simple geometric figures)</p>
+            <img src="assets/vector-ex.jpg" alt="Vector" height="300">
+          </section>
+          <section>
+            <h4>SVG images are scalable and zoomable</h4>
+            <img src="assets/pixels1png.png" alt="Pixels" height="220">
+            <img src="assets/vector1.png" alt="Vector"  height="220">
+          </section>
+        </section>
+
+				<section data-transition="convex">
+          <h2>What is SVG?</h2>
+          <ul>
+            <li>SVG is used to define vector-based graphics for the Web</li>
+            <li>SVG defines the graphics in XML format</li>
+            <li>Every element and every attribute in SVG files can be animated</li>
+            <li>SVG is a W3C recommendation</li>
+            <li>SVG integrates with other W3C standards such as the DOM and XSL</li>
+          </ul>
+        </section data-transition="convex">
+
+				<section data-transition="convex">
+          <h4>SVG Advantages</h4>
+          <li>SVG images can be created and edited with any text editor</li>
+          <li>SVG images can be searched, indexed, scripted, and compressed</li>
+          <li>SVG images are scalable</li>
+          <li>SVG images can be printed with high quality at any resolution</li>
+          <li>SVG images are zoomable</li>
+          <li>SVG graphics do NOT lose any quality if they are zoomed or resized</li>
+          <li>SVG is an open standard</li>
+          <li>SVG files are pure XML</li>
+        </section>
+
+        <section data-transition="convex">
+          <h4>You can embed SVG elements directly into your HTML pages</h4>
+          <svg width="100" height="100" style="background-color:#CACFD2">
+            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+          </svg>
+          <pre>
+            <code class="html" data-trim data-line-numbers>
+              <body>
+                <svg width="100" height="100">
+                  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                </svg>
+              </body>
+            </code>
+          </pre>
+        </section>
+
+        <section data-background="#fff" data-transition="convex">
+          <section>
+            <h4>SVG Rectangle</h4>
+            <p>Example 1</p>
+          <svg width="400" height="110" style="background-color:#CACFD2">
+            <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+          </svg>
+          <pre>
+            <code class="html" data-trim data-line-numbers>
+              <svg width="400" height="110">
+                <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+              </svg>
+            </code>
+          </pre>
+          </section>
+          <section>
+            <p>Example 2</p>
+            <svg width="400" height="180" style="background-color:#CACFD2">
+              <rect x="50" y="20" width="150" height="150"
+              style="fill:blue;stroke:pink;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg width="400" height="180">
+                  <rect x="50" y="20" width="150" height="150"
+                  style="fill:blue;stroke:pink;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />
+                </svg>
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>Example 3</p>
+            <svg width="400" height="180" style="background-color:#CACFD2">
+              <rect x="50" y="20" width="150" height="150"
+              style="fill:blue;stroke:pink;stroke-width:5;opacity:0.5" />
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg width="400" height="180">
+                  <rect x="50" y="20" width="150" height="150"
+                  style="fill:blue;stroke:pink;stroke-width:5;opacity:0.5" />
+                </svg>
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>Example</p>
+            <svg width="400" height="180" style="background-color:#CACFD2">
+              <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+              style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg width="400" height="180">
+                  <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+                  style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+                </svg>
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <section data-background="#fff" data-transition="convex">
+          <h4>SVG Circle</h4>
+          <svg height="100" width="100" style="background-color:#CACFD2">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+          </svg>
+          <pre>
+            <code class="html" data-trim data-line-numbers>
+              <svg height="100" width="100">
+                <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+              </svg>
+            </code>
+          </pre>
+        </section>
+
+        <section data-background="#fff" data-transition="convex">
+          <section>
+            <h4>SVG Ellipse</h4>
+            <p>Example 1</p>
+            <svg height="140" width="500" style="background-color:#CACFD2">
+              <ellipse cx="200" cy="80" rx="100" ry="50"
+              style="fill:yellow;stroke:purple;stroke-width:2" />
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg height="140" width="500">
+                  <ellipse cx="200" cy="80" rx="100" ry="50"
+                  style="fill:yellow;stroke:purple;stroke-width:2" />
+                </svg>
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>Example 2</p>
+            <svg height="150" width="500" style="background-color:#CACFD2">
+              <ellipse cx="240" cy="100" rx="220" ry="30" style="fill:purple" />
+              <ellipse cx="220" cy="70" rx="190" ry="20" style="fill:lime" />
+              <ellipse cx="210" cy="45" rx="170" ry="15" style="fill:yellow" />
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg height="150" width="500">
+                  <ellipse cx="240" cy="100" rx="220" ry="30" style="fill:purple" />
+                  <ellipse cx="220" cy="70" rx="190" ry="20" style="fill:lime" />
+                  <ellipse cx="210" cy="45" rx="170" ry="15" style="fill:yellow" />
+                </svg>
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>Example 3</p>
+            <svg height="100" width="500" style="background-color:#CACFD2">
+              <ellipse cx="240" cy="50" rx="220" ry="30" style="fill:yellow" />
+              <ellipse cx="220" cy="50" rx="190" ry="20" style="fill:white" />
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg height="100" width="500">
+                  <ellipse cx="240" cy="50" rx="220" ry="30" style="fill:yellow" />
+                  <ellipse cx="220" cy="50" rx="190" ry="20" style="fill:white" />
+                </svg>
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <section data-background="#fff" data-transition="convex">
+          <h4>SVG Line</h4>
+          <svg height="210" width="500" style="background-color:#CACFD2">
+            <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+          </svg>
+          <pre>
+            <code class="html" data-trim data-line-numbers>
+              <svg height="210" width="500">
+                <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+              </svg>
+            </code>
+          </pre>
+        </section>
+
+        <section data-background="#fff" data-transition="convex">
+          <section>
+            <h4>SVG Polygon</h4>
+            <p>Example 1</p>
+            <svg height="220" width="500" style="background-color:#CACFD2">
+              <polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1" />
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg height="220" width="500">
+                  <polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1" />
+                </svg>
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>Example 2</p>
+            <svg height="260" width="500" style="background-color:#CACFD2">
+              <polygon points="220,10 300,210 170,250 123,234" style="fill:lime;stroke:purple;stroke-width:1" />
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg height="260" width="500">
+                  <polygon points="220,10 300,210 170,250 123,234" style="fill:lime;stroke:purple;stroke-width:1" />
+                </svg>
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>Example 3</p>
+            <svg height="210" width="500" style="background-color:#CACFD2">
+              <polygon points="100,10 40,198 190,78 10,78 160,198"
+              style="fill:lime;stroke:purple;stroke-width:5;fill-rule:nonzero;" />
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg height="210" width="500">
+                  <polygon points="100,10 40,198 190,78 10,78 160,198"
+                  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:nonzero;" />
+                </svg>
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>Example 4</p>
+            <svg height="210" width="500" style="background-color:#CACFD2">
+              <polygon points="100,10 40,198 190,78 10,78 160,198"
+              style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg height="210" width="500">
+                  <polygon points="100,10 40,198 190,78 10,78 160,198"
+                  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+                </svg>
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <section data-background="#fff" data-transition="convex">
+          <section>
+            <h4>SVG Polyline</h4>
+            <p>used to create any shape that consists of only straight lines (connected at several points):</p>
+            <p>Example 1</p>
+            <svg height="200" width="500" style="background-color:#CACFD2">
+              <polyline points="20,20 40,25 60,40 80,120 120,140 200,180"
+              style="fill:none;stroke:black;stroke-width:3" />
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg height="200" width="500">
+                  <polyline points="20,20 40,25 60,40 80,120 120,140 200,180"
+                  style="fill:none;stroke:black;stroke-width:3" />
+                </svg>
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>Example 2</p>
+            <svg height="180" width="500" style="background-color:#CACFD2">
+              <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160"
+              style="fill:white;stroke:red;stroke-width:4" />
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg height="180" width="500">
+                  <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160"
+                  style="fill:white;stroke:red;stroke-width:4" />
+                </svg>
+              </code>
+            </pre>
+          </section>     
+        </section>
+
+        <section data-background="#fff" data-transition="convex">
+          <section>
+            <h4>SVG Path</h4>
+            <p>Strongest element. Commands available:</p>
+            <ul>
+              <li>M = moveto</li>
+              <li>L = lineto</li>
+              <li>H = horizontal lineto</li>
+              <li>V = vertical lineto</li>
+              <li>C = curveto</li>
+              <li>S = smooth curveto</li>
+              <li>Q = quadratic Bézier curve</li>
+              <li>T = smooth quadratic Bézier curveto</li>
+              <li>A = elliptical Arc</li>
+              <li>Z = closepath</li>
+            </ul>
+          </section>
+          <section>
+            <p>Example</p>
+            <svg height="210" width="400" style="background-color:#CACFD2">
+              <path d="M150 0 L75 200 L225 200 Z" />
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg height="210" width="400">
+                  <path d="M150 0 L75 200 L225 200 Z" />
+                </svg>
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <section data-background="#fff" data-transition="convex">
+          <section>
+            <h4>SVG Text</h4>
+            <p>Example 1</p>
+            <svg height="100" width="200">
+              <text x="0" y="30" fill="red">I love SVG!</text>
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg height="100" width="200">
+                  <text x="0" y="30" fill="red">I love SVG!</text>
+                </svg>
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>Example 2</p>
+            <svg height="200" width="200">
+              <text x="20" y="70" fill="red" transform="rotate(30 20,40)">I love SVG</text>
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg height="200" width="200">
+                  <text x="20" y="70" fill="red" transform="rotate(30 20,40)">I love SVG</text>
+                </svg>
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>Example 3</p>
+            <svg height="150" width="300">
+              <text x="10" y="50" style="fill:red;">Several lines:
+                <tspan x="10" y="90">First line.</tspan>
+                <tspan x="10" y="130">Second line.</tspan>
+              </text>
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg height="150" width="300">
+                  <text x="10" y="50" style="fill:red;">Several lines:
+                    <tspan x="10" y="90">First line.</tspan>
+                    <tspan x="10" y="130">Second line.</tspan>
+                  </text>
+                </svg>
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p>Example 4</p>
+            <svg height="100" width="200" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <a xlink:href="https://www.w3schools.com/graphics/" target="_blank">
+                <text x="0" y="50" fill="red">I love SVG!</text>
+              </a>
+            </svg>
+            <pre>
+              <code class="html" data-trim data-line-numbers>
+                <svg height="100" width="200" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <a xlink:href="https://www.w3schools.com/graphics/" target="_blank">
+                    <text x="0" y="50" fill="red">I love SVG!</text>
+                  </a>
+                </svg>
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <section data-background="#fff" data-transition="convex">
+          <h4>SVG Stroke Properties</h4>
+          <svg height="240" width="300">
+            <g fill="none">
+              <path stroke="red" d="M5 20 l215 0" />
+              <path stroke="black" d="M5 40 l215 0" />
+              <path stroke="blue" d="M5 60 l215 0" />
+              <path stroke="black" stroke-width="2" d="M5 80 l215 0" />
+              <path stroke="black" stroke-width="4" d="M5 100 l215 0" />
+              <path stroke="black" stroke-width="6" d="M5 120 l215 0" />
+              <path stroke="black" stroke-width="6" stroke-linecap="round" d="M5 140 l215 0" />
+              <path stroke="black" stroke-width="6" stroke-linecap="square" d="M5 160 l215 0" />
+              <path stroke="black" stroke-width="4" stroke-dasharray="5,5" d="M5 180 l215 0" />
+              <path stroke="black" stroke-width="4" stroke-dasharray="10,10" d="M5 200 l215 0" />
+              <path stroke="black" stroke-width="4" stroke-dasharray="20,10,5,5,5,10" d="M5 220 l215 0" />
+            </g>
+          </svg>
+          <pre>
+            <code class="html" data-trim data-line-numbers>
+              <path stroke="red" d="M5 20 l215 0"></path>
+              <path stroke-width="4" d="M5 40 l215 0"></path>
+              <path stroke-linecap="round" d="M5 180 l215 0"></path>
+              <path stroke-dasharray="20,10,5,5,5,10" d="M5 180 l215 0"></path>
+            </code>
+          </pre>
+        </section>
+
+        <section data-background="#fff" data-transition="convex">
+          <h4>Many filter elements</h4>
+          <p>(for combining images, color transformations, blur, ligntning, drop shadows etc.)</p>
+          <img src="assets/svg_fegaussianblur.jpg" alt="Blur">
+          <img src="assets/svg_feoffset.gif" alt="Offcet">
+          <img src="assets/svg_feoffset2.jpg" alt="Offcet">
+          <img src="assets/svg_feoffset3.jpg" alt="Offcet">
+          <img src="assets/svg_feoffset4.jpg" alt="Offcet">
+        </section>
+
+        <section data-background="#fff" data-transition="convex">
+          <h4>Linear and Radial Gradients</h4>
+          <svg height="150" width="200">
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+          </svg>
+          <svg height="150" width="200">
+            <defs>
+              <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad2)" />
+          </svg>
+          <svg height="150" width="200">
+            <defs>
+              <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad3)" />
+            <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">
+            SVG</text>
+          </svg>
+          <svg height="150" width="500">
+            <defs>
+              <radialGradient id="grad4" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                <stop offset="0%" style="stop-color:rgb(255,255,255);
+                stop-opacity:0" />
+                <stop offset="100%" style="stop-color:rgb(0,0,255);stop-opacity:1" />
+              </radialGradient>
+            </defs>
+            <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad4)" />
+          </svg>
+        </section>
+
+        <section data-transition="convex">
+          <h4>SVG ideal for creating icons, logos, diagrams</h4>
+          <ul>
+            <li>file size depends on image complexity and it smaller than JPEG and PNG for simple images</li>
+            <li>simple to make changes with any text editor</li>
+
+            <li>do not supported by old browsers</li>
+            <li>SVG cannot be used in photos</li>
+          </ul>
+        </section>
+
 			</div>
 		</div>
 
