@@ -111,7 +111,7 @@
           <section>
             <h4>
               SVG images are scalable and zoomable, graphics do NOT lose any
-              quality
+              quality (like in raster graphics)
             </h4>
             <img src="assets/pixels1png.png" alt="Pixels" height="220" />
             <img src="assets/vector1.png" alt="Vector" height="220" />
@@ -120,7 +120,7 @@
 
         <section data-transition="convex">
           <li>SVG defines the graphics in XML format</li>
-          <li>SVG integrates with other W3C standards such as the DOM</li>
+          <li>SVG integrates with W3C standards such as the DOM</li>
           <h4>You can embed SVG elements directly into your HTML pages</h4>
 
           <svg width="100" height="100" style="background-color: #cacfd2">
@@ -448,14 +448,14 @@
             <svg height="180" width="500" style="background-color: #cacfd2">
               <polyline
                 points="0,40 40,40 40,80 80,80 80,120 120,120 120,160"
-                style="fill: white; stroke: red; stroke-width: 4"
+                style="fill: none; stroke: red; stroke-width: 4"
               />
             </svg>
             <pre>
               <code class="html" data-trim data-line-numbers>
                 <svg height="180" width="500">
                   <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160"
-                  style="fill:white;stroke:red;stroke-width:4" />
+                  style="fill: none;stroke:red;stroke-width:4" />
                 </svg>
               </code>
             </pre>
@@ -561,7 +561,7 @@
             <pre>
               <code class="html" data-trim data-line-numbers>
                 <svg height="100" width="200" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <a xlink:href="https://www.w3schools.com/graphics/" target="_blank">
+                  <a xlink:href="https://app.rs.school" target="_blank">
                     <text x="0" y="50" fill="red">I love SVG!</text>
                   </a>
                 </svg>
@@ -637,6 +637,13 @@
 
         <section data-background="#fff" data-transition="convex">
           <h4>Linear and Radial Gradients</h4>
+          <pre>
+              <code class="html" data-trim data-line-numbers>
+                <linearGradient></linearGradient>
+                <radialGradient></radialGradient>
+              </code>
+            </pre>
+
           <svg height="150" width="200">
             <defs>
               <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -925,10 +932,25 @@
           </section>
         </section>
 
+        <section>
+          <h4>Can use JS to transform or animate SVG</h4>
+          <img src="assets/HTML-js.png" alt="HTML" />
+          <img src="assets/HTML-js-js.png" alt="HTML" />
+          <img style="height: 150px" src="assets/HTML0js-img.png" alt="HTML" />
+          <li>
+            JS Libraries for SVG Animation (BonsaiJS, VivusJS, SVG.js, Snap.svg,
+            )
+          </li>
+        </section>
+
         <section data-transition="convex">
           <h4>SVG ideal for creating icons, logos, diagrams</h4>
           <ul>
-            <li>SVG images can be created and edited with any text editor</li>
+            <li>
+              SVG images can be created and edited with any text editor, but
+              better use special editors (Inkscape, Gravit Designer, Vecteezy
+              Editor)
+            </li>
             <li>
               file size depends on image complexity and it smaller than JPEG and
               PNG for simple images
